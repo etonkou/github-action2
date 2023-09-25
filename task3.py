@@ -8,7 +8,7 @@ data.describe()
 #num_columns = data.select_dtypes('int').columns
 #data=data[num_columns]
 data=data.drop('Country',axis=1)
-data.corr()
+#data.corr()
 
 from pandas_profiling import ProfileReport
 profile = ProfileReport(data, title="Pandas Profiling Report", explorative=True)
