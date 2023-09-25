@@ -1,0 +1,23 @@
+name: tasks automation 3
+
+on:
+  workflow_dispatch:
+
+jobs:
+  run_python:
+    runs-on: ubuntu-latest
+    steps:
+     - name: Checkout code
+       uses: actions/checkout@v3
+     
+     - name: Setup Python
+       uses: actions/setup-python@v4
+       with:
+         python-version: '3.10'
+     
+     # Install and setup a Python environment
+     - name: Run Python Script
+       run: |
+         python -m pip install -r requirements.txt
+         python -m pip install https://github.com/pandas-profiling/pandas-profiling/archive/master.zip
+         python task3.py
