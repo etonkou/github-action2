@@ -5,6 +5,8 @@ data.head()
 data.shape
 data.info()
 data.describe()
+num_columns = data.select_dtypes('int').columns
+data=data[num_columns]
 data.corr()
 
 from pandas_profiling import ProfileReport
