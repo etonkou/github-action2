@@ -5,8 +5,9 @@ data.head()
 data.shape
 data.info()
 data.describe()
-num_columns = data.select_dtypes('int').columns
-data=data[num_columns]
+#num_columns = data.select_dtypes('int').columns
+#data=data[num_columns]
+data=data.drop('Country',axis=1)
 data.corr()
 
 from pandas_profiling import ProfileReport
