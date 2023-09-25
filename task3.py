@@ -10,6 +10,10 @@ data.describe()
 data=data.drop('Country',axis=1)
 #data.corr()
 
-from pandas_profiling import ProfileReport
-profile = ProfileReport(data, title="Pandas Profiling Report", explorative=True)
-profile.to_file('./reports/report.html')
+print("***********")
+print(f"data.shape: {data.shape}")
+print(f"data.info(): {data.info()}")
+print(f"{data.head()}")
+# from pandas_profiling import ProfileReport
+# profile = ProfileReport(data, title="Pandas Profiling Report", explorative=True)
+# profile.to_file('./reports/report.html')
